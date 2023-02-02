@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <title>PokeDex</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="icon" href="./img/icon.png"> 
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="conteiner-fluid d-flex justify-content-center">
+        <img src="./img/logo.png" alt="">
+        <p class="text-light mb-2 p-4 fs-1">Poke<span class="text-dark" id="titu">Dex</span></p>
+        <img src="./img/logo.png" alt="">
+    </header>
+    <!-- FINAL HEADER -->
+    <!---->
+  <main class="container-fluid d-flex flex-column align-items-center">
+        <!-- INPUT NOMBRES -->
+    <div class="shadow p-3 mb-3 mt-5 bg-white rounded">
+        <label for="pokemons">
+            Nombre: 
+        </label>
+        <form class="d-flex m-3" role="search">
+            <input id="busquedaNombre" list="listadoPokemons" name="busquedaNombre" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button id="btnNombre" class="btn btn-outline-success bg-light" type="submit">🔎</button>
+ </form>
+ <datalist id="listadoPokemons">
+    <option value="Pikachu">
+    <option value="Charizard">
+    <option value="Squirtle">
+    <option value="Bulbasaur">
+    <option value="Mewtwo">
+    <option value="Articuno">
+    <option value="Zapdos">
+    <option value="Moltres">
+    <option value="Dragonite">
+    <option value="Snorlax">
+    <option value="Lapras">
+    <option value="Eevee">
+    <option value="Ponyta">
+    <option value="Rapidash">
+    <option value="Sandsdrew">
+    <option value="Sandslash">
+    <option value="Ivisaur">
+    <option value="Venusaur">
+    <option value="Charmander">
+    <option value="Charmeleon">
+    <option value="Wartortle">
+    <option value="Blastoise">
+    <option value="Caterpie">
+    <option value="Metapod">
+    <option value="Butterfree">
+    <option value="Weedle">
+    <option value="Kakuna">
+    <option value="Beedrill">
+    <option value="Pidgey">
+    <option value="Pidgeotto">
+    <option value="Pidgeot">
+    <option value="Rattata">
+    <option value="Raticate">
+    <option value="Spearow">
+    <option value="Fearow">
+    <option value="Ekans">
+    <option value="Arbok">
+    <option value="Raichu">
+    </datalist>
+    </div>
+    <!-- FINAL DE INPUT NOMBRES -->
+        <!--  -->
+    <!-- POKEDEX -->
+    <section id="pokedex">
+        <div>
+            <img id="imagenPokemon" src="" alt="">
+        </div>
+        <div>
+            <h2 id="nombrePokemon">Pokemon</h2>
+        </div>
+        <div>
+            <h3 id="numeroPokemon">0000</h3>
+        </div>
+        <div id="infoPokedex">
+            <p>Es un pokemon de tipo <span id="tipo" class="text-warning">_____</span></p>
+            <br>
+            <p>Habilidades: <span id="habilidad" class="text-primary">______</span></p>
+            <br>
+            <p>Altura: <span id="altura" class="text-danger">____</span></p>
+            <br>
+            <p>Peso: <span id="peso" class="text-primary">____</span></p>
+            <br>
+            <p>Debilidad: <span id="debilidad" class="text-warning">____</span></p>
+            <br>
+        </div>
+    </section>
+    <!-- FINAL POKEDEX -->
+    <!--  -->
+    <!-- IMPUT DE TIPOS DE POKEMON -->
+    <div class="shadow p-3 mb-5 mt-5 bg-white rounded">
+        <label for="tipos">
+            ...o elije un tipo: 
+        </label>
+        <form class="d-flex m-3" role="search">
+            <input id="busquedaTipo" list="listaPokemons" name="busquedaTipo" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button id="btnTipo" class="btn btn-outline-success bg-light" type="submit"></button>
+ </form>
+ <datalist id="listaPokemons">
+    <option value="Electric">
+    <option value="Fire/Flying">
+    <option value="Water">
+    <option value="Grass/Poison">
+    <option value="Psychic">
+    <option value="Ice/Flying">
+    <option value="Electric/Flying">
+    <option value="Dragon/Flying">
+    <option value="Normal">
+    <option value="Water/Ice">
+    <option value="Fire">
+    <option value="Ground">
+    <option value="Bug">
+    <option value="Poison">
+ </datalist>
+    </div>
+    <!-- FINAL INPUT DE TIPOS DE POKEMONS -->
+    <!--  -->
+    <!-- CARTAS DE POKEMONS -->
+    <div id="card-container"></div>
+    <!-- FINAL CARTAS DE POKEMONS -->
+  </main>
+  <footer class="p-2 mt-5 d-flex justify-content-center">
+    <p class="text-warning mt-3">Copyright © 2022. All right reserved</p>
+  </footer>
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  </script>
+  <script src="./apps.js"></script>
+</body>
+
+</html>
