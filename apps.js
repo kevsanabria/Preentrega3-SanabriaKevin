@@ -17,7 +17,7 @@ btnNombre.addEventListener("click", (e) => {
   infoPokedexNombreOId(busqueda)
 })
 
-const favoritos = []
+const favoritos = JSON.parse(localStorage.getItem("favoritos")) || [];
 
 function infoPokedexNombreOId(parametro) {
   const apiUrl = `https://pokeapi.co/api/v2/pokemon/${parametro}`;
@@ -46,9 +46,9 @@ function infoPokedexNombreOId(parametro) {
         pokedexContainer.appendChild(botonFavoritos);
       }
 
-
       botonFavoritos.addEventListener("click", function () {
         favoritos.push(pokemon);
+        localStorage.setItem("favoritos", JSON.stringify(favoritos));
         console.log("El pokemon ha sido agregado a favoritos:", pokemon);
         Swal.fire({
           icon: 'success',
@@ -65,8 +65,6 @@ function infoPokedexNombreOId(parametro) {
 
     })
 }
-
-
 
 const container = document.getElementById("cardContainer");
 const generateCard = (pokemon) => {
