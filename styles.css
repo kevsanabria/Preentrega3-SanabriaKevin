@@ -70,4 +70,14 @@ footer{
     max-width: 280px;
     padding-top: 20px;
     min-width: 280px;
+    font-size: 22px;
+}
+
+#favs{
+    border-radius: 25px;
+    padding: 5px;
+}
+#verFavs{
+    border-radius: 25px;
+    padding: 5px;
 }
